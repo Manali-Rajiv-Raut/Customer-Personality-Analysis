@@ -1,0 +1,18 @@
+# Exploratory Data Analysis (Dataprep.eda)
+
+#!pip install dataprep
+
+import pandas as pd
+
+from dataprep.eda import plot, plot_correlation, create_report, plot_missing
+
+## 1. Loading the data
+
+marketing_data = pd.read_csv("marketing_campaign.csv", delimiter = ";")
+marketing_data.head(10)
+
+marketing_data.shape
+
+## 2. Dataprep.eda
+
+create_report(marketing_data)
